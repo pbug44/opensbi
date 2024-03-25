@@ -12,7 +12,8 @@
 
 static int bl808_early_init(bool cold_boot, const struct fdt_match *match)
 {
-	csr_set(THEAD_C9XX_CSR_MXSTATUS, BIT(22));
+	csr_set(THEAD_C9XX_CSR_MXSTATUS, BIT(21));	/* MAEE */
+	csr_set(THEAD_C9XX_CSR_MXSTATUS, BIT(22));	/* THEADISAEE */
 	csr_set(THEAD_C9XX_CSR_MHCR, 0x117f);
 	csr_set(THEAD_C9XX_CSR_MHINT, 0x304);
 
