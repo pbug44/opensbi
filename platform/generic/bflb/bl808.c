@@ -22,7 +22,7 @@ static int bl808_early_init(bool cold_boot, const struct fdt_match *match)
 static int bl808_final_init(bool cold_boot, const struct fdt_match *match)
 {
 	struct sbi_domain *dom = sbi_domain_thishart_ptr();
-	uint32 hart = current_hartid();
+	u32 hart = current_hartid();
 
 	/*
 	 * the domain that is the root domain and is on the boot cpu
