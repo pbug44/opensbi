@@ -5,6 +5,7 @@
  */
 
 #include <platform_override.h>
+#include <sbi/sbi_domain.h>
 #include <sbi/riscv_asm.h>
 #include <sbi/sbi_bitops.h>
 #include <sbi_utils/fdt/fdt_helper.h>
